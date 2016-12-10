@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Jun 08 10:35:45 2016
+# Process ID: 6052
+# Current directory: C:/Users/maval/Desktop/hw/zybo_bsd
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8552 C:\Users\maval\Desktop\hw\zybo_bsd\zybo_bsd.xpr
+# Log file: C:/Users/maval/Desktop/hw/zybo_bsd/vivado.log
+# Journal file: C:/Users/maval/Desktop/hw/zybo_bsd\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/maval/Desktop/hw/lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:53 ; elapsed = 00:00:45 . Memory (MB): peak = 828.191 ; gain = 245.668
+open_bd_design {C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 948.406 ; gain = 84.020
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 08 10:40:26 2016...

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;test/src/MUTEXSEM&apos; to &apos;MUTEXSEM.h&apos;" description="Rename resource &apos;MUTEXSEM&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/MUTEXSEM" name="MUTEXSEM.h" stamp="1464988961036" updateReferences="true"/>
+</session>

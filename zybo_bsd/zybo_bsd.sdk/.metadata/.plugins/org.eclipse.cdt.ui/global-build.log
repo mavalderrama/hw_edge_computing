@@ -1,0 +1,301 @@
+22:33:44 **** Clean-only build of configuration Debug for project test ****
+make clean 
+rm -rf  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o  ./src/app.d ./src/http-c_app.d ./src/http-c_hooks.d ./src/static_files.d  test.elf.size  test.elf
+' '
+22:33:45 **** Clean-only build of project test_bsp ****
+make -k clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+22:33:45 **** Build of project test_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_axitimer_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_axitimer_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_common_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_common_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_cpu_cortexa9_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_cpu_cortexa9_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_dns-c_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_dns-c_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_emacps_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_emacps_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_http-c_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_http-c_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_l2cachec_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_l2cachec_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_osiii_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_osiii_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_scuc_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_scuc_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_scugic_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_scugic_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_scutimer_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_scutimer_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_standalone_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_standalone_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_tcpip_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_tcpip_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_uartps_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_uartps_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_usbps_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_usbps_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ucos_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_v1_41/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_axitimer_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_axitimer_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ucos_axitimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_common_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_common_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uC/OS Common Components"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_cpu_cortexa9_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_cpu_cortexa9_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ucos_cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_dns-c_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_dns-c_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uC/DNSc"
+"uC/DNSc sources not found, using pre-compiled library"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_emacps_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_emacps_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ucos_usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_http-c_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_http-c_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uC/HTTPc"
+"uC/HTTPc sources not found, using pre-compiled library"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_l2cachec_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_l2cachec_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ucos_scuc"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_osiii_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_osiii_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uC/OS-III"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_scuc_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_scuc_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ucos_l2cachec"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_scugic_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_scugic_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_scutimer_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_scutimer_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_standalone_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_standalone_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_tcpip_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_tcpip_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uC/TCP-IP"
+"uC/TCP-IP sources not found, using pre-compiled library"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_uartps_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_uartps_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ucos_emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_usbps_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_usbps_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ucos_usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/ucos_v1_41/src"
+make -C ps7_cortexa9_0/libsrc/ucos_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uC/OS"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+22:34:15 **** Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building file: ../src/http-c_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_app.o" -MMD -MP -MF"src/http-c_app.d" -MT"src/http-c_app.d" -o "src/http-c_app.o" "../src/http-c_app.c"
+../src/http-c_app.c: In function 'HTTPcApp_ReqSendPost':
+../src/http-c_app.c:489:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+     xil_printf("reqsend\n");                                                            /* ---------------- SEND HTTP REQUEST ----------------- */
+     ^
+../src/http-c_app.c:340:28: warning: unused variable 'p_data' [-Wunused-variable]
+     CPU_CHAR              *p_data;
+                            ^
+../src/http-c_app.c:337:28: warning: unused variable 'form_nbr' [-Wunused-variable]
+     CPU_INT08U             form_nbr;
+                            ^
+../src/http-c_app.c:336:28: warning: unused variable 'p_form_tbl' [-Wunused-variable]
+     HTTPc_FORM_TBL_FIELD  *p_form_tbl;
+                            ^
+'Finished building: ../src/http-c_app.c'
+' '
+'Building file: ../src/http-c_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_hooks.o" -MMD -MP -MF"src/http-c_hooks.d" -MT"src/http-c_hooks.d" -o "src/http-c_hooks.o" "../src/http-c_hooks.c"
+../src/http-c_hooks.c: In function 'HTTPcApp_ReqBodyHook':
+../src/http-c_hooks.c:228:6: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+      xil_printf("len %d\n",str_len);
+      ^
+'Finished building: ../src/http-c_hooks.c'
+' '
+'Building file: ../src/static_files.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/static_files.o" -MMD -MP -MF"src/static_files.d" -MT"src/static_files.d" -o "src/static_files.o" "../src/static_files.c"
+'Finished building: ../src/static_files.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 315172	   2340	 270432	 587944	  8f8a8	test.elf
+'Finished building: test.elf.size'
+' '
+22:45:00 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/http-c_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_hooks.o" -MMD -MP -MF"src/http-c_hooks.d" -MT"src/http-c_hooks.d" -o "src/http-c_hooks.o" "../src/http-c_hooks.c"
+../src/http-c_hooks.c: In function 'HTTPcApp_ReqBodyHook':
+../src/http-c_hooks.c:224:25: warning: assignment makes integer from pointer without a cast
+             *p_data_len = &HTTPcApp_FormBuf[0]);//
+                         ^
+../src/http-c_hooks.c:224:47: error: expected ';' before ')' token
+             *p_data_len = &HTTPcApp_FormBuf[0]);//
+                                               ^
+../src/http-c_hooks.c:224:47: error: expected statement before ')' token
+make: *** [src/http-c_hooks.o] Error 1
+22:45:26 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/http-c_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_hooks.o" -MMD -MP -MF"src/http-c_hooks.d" -MT"src/http-c_hooks.d" -o "src/http-c_hooks.o" "../src/http-c_hooks.c"
+'Finished building: ../src/http-c_hooks.c'
+' '
+'Building file: ../src/static_files.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/static_files.o" -MMD -MP -MF"src/static_files.d" -MT"src/static_files.d" -o "src/static_files.o" "../src/static_files.c"
+'Finished building: ../src/static_files.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 313092	   2340	 270432	 585864	  8f088	test.elf
+'Finished building: test.elf.size'
+' '
+22:53:45 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building file: ../src/http-c_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_app.o" -MMD -MP -MF"src/http-c_app.d" -MT"src/http-c_app.d" -o "src/http-c_app.o" "../src/http-c_app.c"
+../src/http-c_app.c: In function 'HTTPcApp_ReqSendPost':
+../src/http-c_app.c:489:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+     xil_printf("reqsend\n");                                                            /* ---------------- SEND HTTP REQUEST ----------------- */
+     ^
+../src/http-c_app.c:340:28: warning: unused variable 'p_data' [-Wunused-variable]
+     CPU_CHAR              *p_data;
+                            ^
+../src/http-c_app.c:337:28: warning: unused variable 'form_nbr' [-Wunused-variable]
+     CPU_INT08U             form_nbr;
+                            ^
+../src/http-c_app.c:336:28: warning: unused variable 'p_form_tbl' [-Wunused-variable]
+     HTTPc_FORM_TBL_FIELD  *p_form_tbl;
+                            ^
+'Finished building: ../src/http-c_app.c'
+' '
+'Building file: ../src/http-c_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_hooks.o" -MMD -MP -MF"src/http-c_hooks.d" -MT"src/http-c_hooks.d" -o "src/http-c_hooks.o" "../src/http-c_hooks.c"
+'Finished building: ../src/http-c_hooks.c'
+' '
+'Building file: ../src/static_files.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/static_files.o" -MMD -MP -MF"src/static_files.d" -MT"src/static_files.d" -o "src/static_files.o" "../src/static_files.c"
+'Finished building: ../src/static_files.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 313268	   2340	 270432	 586040	  8f138	test.elf
+'Finished building: test.elf.size'
+' '
+22:53:48 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+10:33:10 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/http-c_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_hooks.o" -MMD -MP -MF"src/http-c_hooks.d" -MT"src/http-c_hooks.d" -o "src/http-c_hooks.o" "../src/http-c_hooks.c"
+../src/http-c_hooks.c: In function 'HTTPcApp_ReqBodyHook':
+../src/http-c_hooks.c:229:36: warning: pointer targets in passing argument 1 of 'Str_Len' differ in signedness [-Wpointer-sign]
+             *p_data_len =  Str_Len(&logo_gif[0]);
+                                    ^
+In file included from ../../test_bsp/ps7_cortexa9_0/include/Client/Source/http-c.h:110:0,
+                 from ../src/http-c_hooks.h:68,
+                 from ../src/http-c_hooks.c:58:
+../../test_bsp/ps7_cortexa9_0/include/lib_str.h:276:14: note: expected 'const CPU_CHAR *' but argument is of type 'const unsigned char *'
+ CPU_SIZE_T   Str_Len            (const  CPU_CHAR      *pstr);
+              ^
+'Finished building: ../src/http-c_hooks.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 313268	   2340	 270432	 586040	  8f138	test.elf
+'Finished building: test.elf.size'
+' '
+10:33:18 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.

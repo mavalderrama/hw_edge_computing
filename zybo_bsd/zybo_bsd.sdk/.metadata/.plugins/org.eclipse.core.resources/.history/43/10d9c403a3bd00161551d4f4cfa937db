@@ -1,0 +1,453 @@
+/*
+*********************************************************************************************************
+*                                            EXAMPLE CODE
+*
+*                          (c) Copyright 2009-2015; Micrium, Inc.; Weston, FL
+*
+*               All rights reserved.  Protected by international copyright laws.
+*
+*               Please feel free to use any application code labeled as 'EXAMPLE CODE' in
+*               your application products.  Example code may be used as is, in whole or in
+*               part, or may be used as a reference only.
+*
+*               Please help us continue to provide the Embedded community with the finest
+*               software available.  Your honesty is greatly appreciated.
+*
+*               You can contact us at www.micrium.com.
+*********************************************************************************************************
+*/
+
+/*
+*********************************************************************************************************
+*                                          SETUP INSTRUCTIONS
+*
+*   This demonstration project illustrate a basic uC/OS-III project with simple "hello world" output.
+*
+*   By default some configuration steps are required to compile this example :
+*
+*   1. Include the require Micrium software components
+*       In the BSP setting dialog in the "overview" section of the left pane the following libraries
+*       should be added to the BSP :
+*
+*           ucos_common
+*           ucos_osiii
+*           ucos_standalone
+*
+*   2. Kernel tick source - (Not required on the Zynq-7000 PS)
+*       If a suitable timer is available in your FPGA design it can be used as the kernel tick source.
+*       To do so, in the "ucos" section select a timer for the "kernel_tick_src" configuration option.
+*
+*   3. STDOUT configuration
+*       Output from the xil_printf() and UCOS_Print() functions can be redirected to a supported UART. In
+*       the "ucos" section the stdout configuration will list the available UARTs.
+*
+*   Troubleshooting :
+*       By default the Xilinx SDK may not have selected the Micrium drivers for the timer and UART.
+*       If that is the case they must be manually selected in the drivers configuration section.
+*
+*       Finally make sure the FPGA is programmed before debugging.
+*
+*
+*   Remember that this example is provided for evaluation purposes only. Commercial development requires
+*   a valid license from Micrium.
+*********************************************************************************************************
+*/
+
+
+/*
+*********************************************************************************************************
+*                                            INCLUDE FILES
+*********************************************************************************************************
+*/
+
+#include  <stdio.h>
+#include  <Source/os.h>
+#include  <ucos_bsp.h>
+#include  <string.h>
+#include  <errno.h>
+#include "msgq.h"
+#include"xil_cache.h"
+#include "xil_printf.h"
+#include "http-c_app.h"
+#include  "http-c_hooks.h"
+
+OS_TCB  MyTaskTCB;
+OS_TCB  MyTaskTCB0;                        /*  (1) Storage for task’s TCB                  */
+OS_TCB  MyTaskTCB1;
+OS_TCB  MyTaskTCB2;
+CPU_STK MyTaskStk[200];
+CPU_STK MyTaskStk0[200];
+CPU_STK MyTaskStk1[200];
+CPU_STK MyTaskStk2[200];
+
+/*
+*********************************************************************************************************
+*                                      LOCAL FUNCTION PROTOTYPES
+*********************************************************************************************************
+*/
+
+void  MainTask (void *p_arg);
+void  MyTask (void *p_arg);
+void MainT (void *p_arg);
+void pCostumer ( void *arg );
+void pController ( void *arg );
+void pHardware ( void *arg );
+
+//extern msgq_t   queue [NUM_QUEUES - 1];   /* declare queue as an array of message queues */
+
+/*
+*********************************************************************************************************
+*                                               main()
+*
+* Description : Entry point for C code.
+*
+*********************************************************************************************************
+*/
+
+int main()
+{
+
+    UCOSStartup(MainT);
+
+    return 0;
+}
+
+void  MainT (void *p_arg)
+{
+	xil_printf( "Hello World from MainT %d\n",0);
+
+	xil_printf("Se inicio el proceso\n");
+	//HTTPcApp_Init ();
+	//HTTPcApp_ReqSendPost();
+	xil_printf("HTTPc Enviado\n");
+	//initialiseQueues ();
+	/*OS_ERR  err;
+	 OSTaskCreate (&MyTaskTCB0,
+				  "My Task1",
+				  pCostumer,
+				  (void *)0,
+				   12,
+				  &MyTaskStk0[0],
+				   10,
+				  200,
+					5,
+				   10,
+				  (void *)0,
+				  OS_OPT_TASK_STK_CHK + OS_OPT_TASK_STK_CLR,
+				  &err);
+
+	//xil_printf( "Hello World from MainT %d\n",2);
+	OSTaskCreate (&MyTaskTCB1,
+				  "My Task2",
+				  pController,
+				  (void *)0,
+				   12,
+				  &MyTaskStk1[0],
+				   10,
+				  200,
+					5,
+				   10,
+				  (void *)0,
+				  OS_OPT_TASK_STK_CHK + OS_OPT_TASK_STK_CLR,
+				  &err);
+
+	OSTaskCreate (&MyTaskTCB2,
+				  "My Task3",
+				  pHardware,
+				  (void *)0,
+				   12,
+				  &MyTaskStk2[0],
+				   10,
+				  200,
+					5,
+				   10,
+				  (void *)0,
+				  OS_OPT_TASK_STK_CHK + OS_OPT_TASK_STK_CLR,
+				  &err);*/
+}
+
+
+
+void pCostumer ( void *arg )
+{
+  //char  line [100];
+  int   coinValue = 10;
+  char   cupType = 'C';
+  msg_t OutMsg;
+  OS_ERR err;
+  xil_printf( "Hello World from pCostumer %d",0);
+  while(DEF_ON)
+  {
+    xil_printf ( "Enter coin value (5 or 10)...\n" );
+    /*fflush ( stdout );
+    fflush ( stdin );
+    fgets ( line, sizeof (line), stdin );
+    sscanf ( line, "%d", &coinValue );*/
+    OutMsg.signal = (int) sCoin;
+    OutMsg.value = coinValue;
+    OSTaskQPost((OS_TCB *)&MyTaskTCB1,
+				(void *)&OutMsg,
+				(OS_MSG_SIZE)sizeof(OutMsg),
+				(OS_OPT )OS_OPT_POST_FIFO,
+				(OS_ERR *)&err);
+
+    //sendMessage ( &(queue [CONTROLLER_Q]), OutMsg );      /* send message to Controller */
+    OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+    xil_printf ( "Select (C)offee or (T)ea...\n" );
+    /*fflush ( stdout );
+    fflush ( stdin );
+    fgets ( line, sizeof (line), stdin );
+    sscanf ( line, "%c", &cupType );*/
+    if ( cupType == 'C' )
+    {
+    	OutMsg.signal = (int) sCoffee;
+    	OSTaskQPost((OS_TCB *)&MyTaskTCB1,
+					(void *)&OutMsg,
+					(OS_MSG_SIZE)sizeof(OutMsg),
+					(OS_OPT )OS_OPT_POST_FIFO,
+					(OS_ERR *)&err);
+    	OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+    }
+    else
+    {
+		OutMsg.signal = (int) sTea;
+		OutMsg.value = 0;
+		//sendMessage ( &(queue [CONTROLLER_Q]), OutMsg );      /* send message to Controller */
+    	OSTaskQPost((OS_TCB *)&MyTaskTCB1,
+					(void *)&OutMsg,
+					(OS_MSG_SIZE)sizeof(OutMsg),
+					(OS_OPT )OS_OPT_POST_FIFO,
+					(OS_ERR *)&err);
+    	OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+    }
+  }
+}
+
+void pController ( void *arg )
+{
+  CONTROLLER_STATES state,
+                    state_next;
+  msg_t             InMsg,
+                    OutMsg;
+  void *InMsgV;
+  OS_MSG_SIZE size;
+  OS_ERR err;
+  CPU_TS ts;
+
+  unsigned int      NbrOfCoffee;
+                    //NbrOfTea;
+
+  NbrOfCoffee = 0;
+  //NbrOfTea = 0;
+  state_next = IdleC;
+  while(DEF_ON)
+  {
+    state = state_next;
+    InMsgV = OSTaskQPend((OS_TICK )OS_CFG_TICK_RATE_HZ * 10,
+								(OS_OPT )OS_OPT_PEND_BLOCKING,
+								(OS_MSG_SIZE *)&size,
+								(CPU_TS *)&ts,
+								(OS_ERR *)&err);
+    InMsg = *(msg_t*)InMsgV;
+    //OSTimeDlyHMSM(0, 0, 0, 100, OS_OPT_TIME_HMSM_STRICT, &err);
+    xil_printf ( "Controller received signal %d, value %d in state %d\n", InMsg.signal, InMsg.value, state );
+//fflush ( stdout );
+    switch ( state )
+    {
+      case IdleC:
+        switch ( InMsg.signal )
+        {
+          case sCoin:
+            if ( InMsg.value == 10 )
+              state_next = PaidTen;
+            else
+              state_next = IdleC;
+            break;
+          default:
+            break;
+        }
+        break;
+      case PaidTen:
+        switch ( InMsg.signal )
+        {
+          case sCoffee:
+            OutMsg.signal = (int) sFillWater;
+            OutMsg.value = 0;
+            //sendMessage ( &(queue [HARDWARE_Q]), OutMsg ); /* send message to Hardware */
+            OSTaskQPost((OS_TCB *)&MyTaskTCB2,
+						(void *)&OutMsg,
+						(OS_MSG_SIZE)sizeof(OutMsg),
+						(OS_OPT )OS_OPT_POST_FIFO,
+						(OS_ERR *)&err);
+            state_next = MakingCoffee;
+            break;
+          default:
+            break;
+        }
+        break;
+      case MakingCoffee:
+        switch ( InMsg.signal )
+        {
+          case sWaterOK:
+            OutMsg.signal = (int) sFillCoffee;
+            OutMsg.value = 0;
+            //sendMessage ( &(queue [HARDWARE_Q]), OutMsg ); /* send message to Hardware */
+            OSTaskQPost((OS_TCB *)&MyTaskTCB2,
+						(void *)&OutMsg,
+						(OS_MSG_SIZE)sizeof(OutMsg),
+						(OS_OPT )OS_OPT_POST_FIFO,
+						(OS_ERR *)&err);
+            state_next = WaterForCoffee;
+            break;
+          default:
+            break;
+        }
+        break;
+      case WaterForCoffee:
+        switch ( InMsg.signal )
+        {
+          case sCoffeeOK:
+            OutMsg.signal = (int) sHeatWater;
+            OutMsg.value = 0;
+            //sendMessage ( &(queue [HARDWARE_Q]), OutMsg ); /* send message to Hardware */
+            OSTaskQPost((OS_TCB *)&MyTaskTCB2,
+						(void *)&OutMsg,
+						(OS_MSG_SIZE)sizeof(OutMsg),
+						(OS_OPT )OS_OPT_POST_FIFO,
+						(OS_ERR *)&err);
+            state_next = CoffeeAndWater;
+            break;
+          default:
+            break;
+        }
+        break;
+      case CoffeeAndWater:
+        switch ( InMsg.signal )
+        {
+          case sWarm:
+            NbrOfCoffee++;
+            xil_printf ( "\n%d Cup(s) of Coffee served!\n", NbrOfCoffee );
+            //fflush ( stdout );
+            state_next = IdleC;
+            break;
+          default:
+            break;
+        }
+        break;
+      default:
+        break;
+    }
+    xil_printf ( "\tController next state is %d\n", state_next );
+    //fflush ( stdout );
+  }
+}
+
+void pHardware ( void *arg )
+{
+  HARDWARE_STATES state,
+                  state_next;
+  msg_t           InMsg,
+                  OutMsg;
+  void *InMsgV;
+  OS_MSG_SIZE size;
+  OS_ERR err;
+  CPU_TS ts;
+  state_next = IdleH;
+  while(DEF_ON)
+  {
+    state = state_next;
+    //InMsg = receiveMessage ( &(queue [HARDWARE_Q]) );
+    InMsgV = OSTaskQPend((OS_TICK )OS_CFG_TICK_RATE_HZ * 10,
+								(OS_OPT )OS_OPT_PEND_BLOCKING,
+								(OS_MSG_SIZE *)&size,
+								(CPU_TS *)&ts,
+								(OS_ERR *)&err);
+    //OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+    InMsg = *(msg_t*)InMsgV;
+    xil_printf ( "Hardware received signal %d, value %d in state %d\n", InMsg.signal, InMsg.value, state );
+//fflush ( stdout );
+    switch ( state )
+    {
+      case IdleH:
+        switch ( InMsg.signal )
+        {
+          case sFillWater:
+            OutMsg.signal = (int) sWaterOK;
+            break;
+          case sFillCoffee:
+            OutMsg.signal = (int) sCoffeeOK;
+            break;
+          case sHeatWater:
+            OutMsg.signal = (int) sWarm;
+            break;
+          default:
+            break;
+        }
+        state_next = IdleH;
+        OutMsg.value = 0;
+        //sendMessage ( &(queue [CONTROLLER_Q]), OutMsg );     /* send message to Controller */
+        OSTaskQPost((OS_TCB *)&MyTaskTCB1,
+					(void *)&OutMsg,
+					(OS_MSG_SIZE)sizeof(OutMsg),
+					(OS_OPT )OS_OPT_POST_FIFO,
+					(OS_ERR *)&err);
+        break;
+      default:
+        break;
+    }
+  }
+}
+
+
+/*
+*********************************************************************************************************
+*                                             MainTask()
+*
+* Description : Startup task example code.
+*
+* Returns     : none.
+*
+* Created by  : main().
+*********************************************************************************************************
+*/
+
+
+
+/*void  MainTask (void *p_arg)
+{
+	OS_ERR  err;
+    OSTaskCreate (&MyTaskTCB,
+                  "My Task",
+                   MyTask,
+                  (void *)0,
+                   12,
+                  &MyTaskStk[0],
+                   10,
+                  200,
+                    5,
+                   10,
+                  (void *)0,
+                  OS_OPT_TASK_STK_CHK + OS_OPT_TASK_STK_CLR,
+                  &err);
+
+    OS_ERR       os_err;
+
+    UCOS_Print ("Hello world from the main task\r\n");
+
+    while (DEF_TRUE) {
+        OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &os_err);
+        UCOS_Print("Periodic output every 1 seconds from the main task\r\n");
+    }
+
+}*/
+
+void  MyTask (void *p_arg)                /*  (3) The address of the task is its name     */
+{
+	OS_ERR       os_err;
+
+	UCOS_Print ("Hello world from the MyTask\r\n");
+    while (DEF_ON) {
+		OSTimeDlyHMSM(0, 0, 20, 0, OS_OPT_TIME_HMSM_STRICT, &os_err);
+		UCOS_Print("Periodic output every 1 seconds from MyTask\r\n");
+    }
+}

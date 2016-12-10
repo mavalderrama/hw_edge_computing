@@ -1,0 +1,316 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon May 30 15:54:10 2016
+# Process ID: 2176
+# Current directory: C:/Users/maval/Desktop/hw/zybo_bsd
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11640 C:\Users\maval\Desktop\hw\zybo_bsd\zybo_bsd.xpr
+# Log file: C:/Users/maval/Desktop/hw/zybo_bsd/vivado.log
+# Journal file: C:/Users/maval/Desktop/hw/zybo_bsd\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.xpr
+INFO: [Project 1-313] Project file moved from 'C:/sam_work/testruns/zybo_bsd/hw/zybo_bsd' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'zybo_bsd.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/maval/Desktop/hw/lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+system_m05_regslice_21
+system_axi_vdma_1_1
+system_BTNs_4Bits_0
+system_SWs_4Bits_2
+system_LEDs_4Bits_1
+system_m02_regslice_18
+system_ground_0
+system_vdd_1
+system_axi_protocol_converter_0_0
+system_m04_regslice_20
+system_axi_vdma_0_0
+system_xbar_2
+system_processing_system7_0_0
+system_xlconstant_0_2
+system_auto_pc_6
+system_xbar_3
+system_m00_regslice_16
+system_m01_regslice_17
+system_m03_regslice_19
+system_m06_regslice_22
+system_m07_regslice_23
+system_auto_pc_7
+
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 836.906 ; gain = 166.285
+update_compile_order -fileset sim_1
+open_bd_design {C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd}
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - BTNs_4Bits
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - LEDs_4Bits
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - SWs_4Bits
+Adding component instance block -- Digilent:digilent:axi_dispctrl:1.0 - axi_dispctrl_0
+Adding component instance block -- Digilent:digilent:axi_dispctrl:1.0 - axi_dispctrl_1
+Adding component instance block -- analogdeviceinc.com:adi:axi_i2s_adi:1.0 - axi_i2s_adi_1
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - axi_protocol_converter_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.1 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.1 - axi_vdma_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.0 - ground
+Adding component instance block -- digilentinc.com:digilent:hdmi_tx:1.0 - hdmi_tx_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.3 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.0 - vdd
+Adding component instance block -- xilinx.com:ip:xlconstant:1.0 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m07_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m06_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m05_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m04_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m03_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m02_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m01_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 964.441 ; gain = 113.422
+startgroup
+delete_bd_objs [get_bd_nets AC_SDATA_I_1] [get_bd_ports AC_SDATA_I]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M01_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M03_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M05_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M08_AXI] [get_bd_intf_nets axi_vdma_0_M_AXI_MM2S] [get_bd_intf_nets S01_AXI_1] [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets processing_system7_0_axi_periph_M00_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M02_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M04_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M06_AXI] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_cells processing_system7_0_axi_periph] [get_bd_cells axi_mem_intercon]
+delete_bd_objs [get_bd_nets axi_dispctrl_1_RED_O] [get_bd_nets hdmi_tx_0_HDMI_D0_P] [get_bd_nets axi_dispctrl_0_FSYNC_O] [get_bd_nets axi_dispctrl_0_PXL_CLK_O] [get_bd_nets axi_dispctrl_0_BLUE_O] [get_bd_nets axi_i2s_adi_1_MUTEN_O] [get_bd_intf_nets axi_i2s_adi_1_DMA_RX_REQ] [get_bd_nets vdd_const] [get_bd_intf_nets LEDs_4Bits_GPIO] [get_bd_nets axi_dispctrl_1_DE_O] [get_bd_nets axi_dispctrl_0_GREEN_O] [get_bd_nets hdmi_tx_0_HDMI_CLK_N] [get_bd_nets axi_vdma_0_m_axis_mm2s_tkeep] [get_bd_nets xlconstant_0_const1] [get_bd_nets axi_dispctrl_1_BLUE_O] [get_bd_nets hdmi_tx_0_HDMI_CLK_P] [get_bd_intf_nets processing_system7_0_M_AXI_GP1] [get_bd_intf_nets axi_i2s_adi_1_DMA_TX_REQ] [get_bd_intf_nets processing_system7_0_DMA1_ACK] [get_bd_nets rst_processing_system7_0_97M_peripheral_aresetn] [get_bd_nets xlconstant_0_const] [get_bd_nets axi_dispctrl_1_GREEN_O] [get_bd_nets hdmi_tx_0_HDMI_D2_N] [get_bd_nets axi_vdma_1_m_axis_mm2s_tkeep] [get_bd_intf_nets BTNs_4Bits_GPIO] [get_bd_intf_nets axi_vdma_0_M_AXIS_MM2S] [get_bd_intf_nets axi_vdma_1_M_AXIS_MM2S] [get_bd_nets axi_dispctrl_1_FSYNC_O] [get_bd_nets hdmi_tx_0_HDMI_D2_P] [get_bd_nets axi_dispctrl_0_HSYNC_O] [get_bd_nets axi_i2s_adi_1_SDATA_O] [get_bd_nets rst_processing_system7_0_97M_interconnect_aresetn] [get_bd_nets axi_dispctrl_1_PXL_CLK_5X_O] [get_bd_intf_nets SWs_4Bits_GPIO] [get_bd_nets axi_dispctrl_1_LOCKED_O] [get_bd_nets hdmi_tx_0_HDMI_D1_N] [get_bd_nets axi_dispctrl_1_PXL_CLK_O] [get_bd_intf_nets processing_system7_0_DMA0_ACK] [get_bd_nets axi_dispctrl_1_HSYNC_O] [get_bd_nets hdmi_tx_0_HDMI_D1_P] [get_bd_nets axi_dispctrl_0_VSYNC_O] [get_bd_nets axi_dispctrl_0_RED_O] [get_bd_nets axi_i2s_adi_1_BCLK_O] [get_bd_nets axi_dispctrl_1_VSYNC_O] [get_bd_nets hdmi_tx_0_HDMI_D0_N] [get_bd_cells axi_protocol_converter_0] [get_bd_cells LEDs_4Bits] [get_bd_cells hdmi_tx_0] [get_bd_cells axi_vdma_0] [get_bd_cells axi_dispctrl_0] [get_bd_cells axi_dispctrl_1] [get_bd_cells xlconstant_0] [get_bd_cells SWs_4Bits] [get_bd_cells ground] [get_bd_cells BTNs_4Bits] [get_bd_cells vdd] [get_bd_cells axi_i2s_adi_1] [get_bd_cells axi_vdma_1]
+endgroup
+startgroup
+delete_bd_objs [get_bd_nets axi_i2s_adi_1_LRCLK_O] [get_bd_nets processing_system7_0_FCLK_CLK2] [get_bd_ports VSYNC_O] [get_bd_ports AC_RECLRC] [get_bd_ports AC_MCLK] [get_bd_ports AC_BCLK] [get_bd_ports GREEN_O] [get_bd_ports RED_O] [get_bd_ports BLUE_O] [get_bd_ports AC_PBLRC] [get_bd_ports AC_MUTE_N] [get_bd_ports AC_SDATA_O] [get_bd_ports HSYNC_O]
+delete_bd_objs [get_bd_intf_ports LEDs_4Bits] [get_bd_intf_ports SWs_4Bits] [get_bd_intf_ports BTNs_4Bits]
+endgroup
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports HDMI_D1_P] [get_bd_ports HDMI_D0_P] [get_bd_ports HDMI_CLK_N] [get_bd_ports HDMI_D2_P] [get_bd_ports HDMI_OEN] [get_bd_ports HDMI_D0_N] [get_bd_ports HDMI_D1_N] [get_bd_ports HDMI_CLK_P] [get_bd_ports HDMI_D2_N]
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:ip:processing_system7:5.5 [get_ips  system_processing_system7_0_0]
+Upgrading 'C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd'
+WARNING: [IP_Flow 19-3501] Upgraded system_processing_system7_0_0 from ZYNQ7 Processing System 5.3 to ZYNQ7 Processing System 5.5, with warnings. Please review the upgrade log 'c:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.upgrade_log'.
+INFO: [IP_Flow 19-3670] Detected external interface differences while upgrading IP 'system_processing_system7_0_0'.
+CRITICAL WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading IP 'system_processing_system7_0_0'. These changes may impact your design.
+INFO: [IP_Flow 19-3471] Wrote upgrade log to 'c:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.upgrade_log'.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of IP instance 'system_processing_system7_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.upgrade_log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd> 
+upgrade_ip: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 995.031 ; gain = 19.426
+report_ip_status -name ip_status 
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.PCW_USE_DMA0 {0} CONFIG.PCW_USE_DMA1 {0} CONFIG.PCW_EN_CLK1_PORT {0} CONFIG.PCW_EN_CLK2_PORT {0} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-1684] Pin /processing_system7_0/DMA0_ACLK is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /processing_system7_0/DMA1_ACLK is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /processing_system7_0/FCLK_CLK1 is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK1] [get_bd_nets processing_system7_0_FCLK_CLK1]
+endgroup
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_1
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins axi_timer_0/S_AXI]
+</axi_timer_0/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x42800000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins axi_timer_1/S_AXI]
+</axi_timer_1/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x42810000 [ 64K ]>
+endgroup
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+connect_bd_net [get_bd_pins axi_timer_1/interrupt] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins axi_timer_0/interrupt] [get_bd_pins xlconcat_0/In0]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
+regenerate_bd_layout
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/processing_system7_0/S_AXI_HP0_ACLK
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd 
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/processing_system7_0/S_AXI_HP0_ACLK
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd 
+WARNING: [Runs 36-53] Possible issues detected after target generation. Generation state is unexpected for target 'Synthesis'. Expected 'Generated', got 'Stale' for source 'C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd'
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/processing_system7_0/S_AXI_HP0_ACLK
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd 
+WARNING: [Runs 36-53] Possible issues detected after target generation. Generation state is unexpected for target 'Implementation'. Expected 'Generated', got 'Stale' for source 'C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd'
+[Mon May 30 16:00:27 2016] Launched synth_1...
+Run output will be captured here: C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/synth_1/runme.log
+[Mon May 30 16:00:27 2016] Launched impl_1...
+Run output will be captured here: C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/runme.log
+ERROR: [Common 17-39] 'launch_runs' failed due to earlier errors.
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {0}] [get_bd_cells processing_system7_0]
+endgroup
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Verilog Output written to : C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system.v
+Verilog Output written to : C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system_wrapper.v
+Wrote  : <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_processing_system7_0_0'...
+WARNING: [xilinx.com:ip:processing_system7:5.5-1] system_processing_system7_0_0: The Zynq BFM requires an AXI BFM license to run. Please ensure that you have purchased and setup the AXI BFM license prior to running simulation with this block. Please contact your Xilinx sales office for more information on purchasing this license
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_processing_system7_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_axi_timer_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_timer_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_axi_timer_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_axi_timer_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_axi_timer_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_axi_timer_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_axi_timer_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_axi_timer_1_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_rst_processing_system7_0_100M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_rst_processing_system7_0_100M_0'...
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_rst_processing_system7_0_100M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'system_rst_processing_system7_0_100M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_rst_processing_system7_0_100M_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_xbar_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_xlconcat_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_auto_pc_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system.hwdef
+[Mon May 30 16:02:01 2016] Launched synth_1...
+Run output will be captured here: C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/synth_1/runme.log
+[Mon May 30 16:02:01 2016] Launched impl_1...
+Run output will be captured here: C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1218.477 ; gain = 106.051
+file mkdir C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {0} CONFIG.PCW_MIO_48_PULLUP {enabled} CONFIG.PCW_MIO_49_PULLUP {enabled}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+Wrote  : <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Verilog Output written to : C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system.v
+Verilog Output written to : C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system_wrapper.v
+Wrote  : <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_processing_system7_0_0'...
+WARNING: [xilinx.com:ip:processing_system7:5.5-1] system_processing_system7_0_0: The Zynq BFM requires an AXI BFM license to run. Please ensure that you have purchased and setup the AXI BFM license prior to running simulation with this block. Please contact your Xilinx sales office for more information on purchasing this license
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_processing_system7_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_auto_pc_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system.hwdef
+[Mon May 30 16:37:05 2016] Launched synth_1...
+Run output will be captured here: C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/synth_1/runme.log
+[Mon May 30 16:37:05 2016] Launched impl_1...
+Run output will be captured here: C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1481.512 ; gain = 20.141
+file mkdir C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_MIO_48_PULLUP {disabled} CONFIG.PCW_MIO_49_PULLUP {disabled}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+Wrote  : <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Verilog Output written to : C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system.v
+Verilog Output written to : C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system_wrapper.v
+Wrote  : <C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_processing_system7_0_0'...
+WARNING: [xilinx.com:ip:processing_system7:5.5-1] system_processing_system7_0_0: The Zynq BFM requires an AXI BFM license to run. Please ensure that you have purchased and setup the AXI BFM license prior to running simulation with this block. Please contact your Xilinx sales office for more information on purchasing this license
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'system_processing_system7_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_processing_system7_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'system_auto_pc_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'system_auto_pc_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/hdl/system.hwdef
+[Mon May 30 17:00:52 2016] Launched synth_1...
+Run output will be captured here: C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/synth_1/runme.log
+[Mon May 30 17:00:52 2016] Launched impl_1...
+Run output will be captured here: C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:58 ; elapsed = 00:00:49 . Memory (MB): peak = 1506.809 ; gain = 25.297
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+file mkdir C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file mkdir C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 30 20:01:50 2016...

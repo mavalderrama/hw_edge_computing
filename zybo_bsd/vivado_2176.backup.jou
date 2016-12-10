@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon May 30 15:54:10 2016
+# Process ID: 2176
+# Current directory: C:/Users/maval/Desktop/hw/zybo_bsd
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11640 C:\Users\maval\Desktop\hw\zybo_bsd\zybo_bsd.xpr
+# Log file: C:/Users/maval/Desktop/hw/zybo_bsd/vivado.log
+# Journal file: C:/Users/maval/Desktop/hw/zybo_bsd\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.xpr
+update_compile_order -fileset sim_1
+open_bd_design {C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.srcs/sources_1/bd/system/system.bd}
+startgroup
+delete_bd_objs [get_bd_nets AC_SDATA_I_1] [get_bd_ports AC_SDATA_I]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M01_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M03_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M05_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M08_AXI] [get_bd_intf_nets axi_vdma_0_M_AXI_MM2S] [get_bd_intf_nets S01_AXI_1] [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets processing_system7_0_axi_periph_M00_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M02_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M04_AXI] [get_bd_intf_nets processing_system7_0_axi_periph_M06_AXI] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_cells processing_system7_0_axi_periph] [get_bd_cells axi_mem_intercon]
+delete_bd_objs [get_bd_nets axi_dispctrl_1_RED_O] [get_bd_nets hdmi_tx_0_HDMI_D0_P] [get_bd_nets axi_dispctrl_0_FSYNC_O] [get_bd_nets axi_dispctrl_0_PXL_CLK_O] [get_bd_nets axi_dispctrl_0_BLUE_O] [get_bd_nets axi_i2s_adi_1_MUTEN_O] [get_bd_intf_nets axi_i2s_adi_1_DMA_RX_REQ] [get_bd_nets vdd_const] [get_bd_intf_nets LEDs_4Bits_GPIO] [get_bd_nets axi_dispctrl_1_DE_O] [get_bd_nets axi_dispctrl_0_GREEN_O] [get_bd_nets hdmi_tx_0_HDMI_CLK_N] [get_bd_nets axi_vdma_0_m_axis_mm2s_tkeep] [get_bd_nets xlconstant_0_const1] [get_bd_nets axi_dispctrl_1_BLUE_O] [get_bd_nets hdmi_tx_0_HDMI_CLK_P] [get_bd_intf_nets processing_system7_0_M_AXI_GP1] [get_bd_intf_nets axi_i2s_adi_1_DMA_TX_REQ] [get_bd_intf_nets processing_system7_0_DMA1_ACK] [get_bd_nets rst_processing_system7_0_97M_peripheral_aresetn] [get_bd_nets xlconstant_0_const] [get_bd_nets axi_dispctrl_1_GREEN_O] [get_bd_nets hdmi_tx_0_HDMI_D2_N] [get_bd_nets axi_vdma_1_m_axis_mm2s_tkeep] [get_bd_intf_nets BTNs_4Bits_GPIO] [get_bd_intf_nets axi_vdma_0_M_AXIS_MM2S] [get_bd_intf_nets axi_vdma_1_M_AXIS_MM2S] [get_bd_nets axi_dispctrl_1_FSYNC_O] [get_bd_nets hdmi_tx_0_HDMI_D2_P] [get_bd_nets axi_dispctrl_0_HSYNC_O] [get_bd_nets axi_i2s_adi_1_SDATA_O] [get_bd_nets rst_processing_system7_0_97M_interconnect_aresetn] [get_bd_nets axi_dispctrl_1_PXL_CLK_5X_O] [get_bd_intf_nets SWs_4Bits_GPIO] [get_bd_nets axi_dispctrl_1_LOCKED_O] [get_bd_nets hdmi_tx_0_HDMI_D1_N] [get_bd_nets axi_dispctrl_1_PXL_CLK_O] [get_bd_intf_nets processing_system7_0_DMA0_ACK] [get_bd_nets axi_dispctrl_1_HSYNC_O] [get_bd_nets hdmi_tx_0_HDMI_D1_P] [get_bd_nets axi_dispctrl_0_VSYNC_O] [get_bd_nets axi_dispctrl_0_RED_O] [get_bd_nets axi_i2s_adi_1_BCLK_O] [get_bd_nets axi_dispctrl_1_VSYNC_O] [get_bd_nets hdmi_tx_0_HDMI_D0_N] [get_bd_cells axi_protocol_converter_0] [get_bd_cells LEDs_4Bits] [get_bd_cells hdmi_tx_0] [get_bd_cells axi_vdma_0] [get_bd_cells axi_dispctrl_0] [get_bd_cells axi_dispctrl_1] [get_bd_cells xlconstant_0] [get_bd_cells SWs_4Bits] [get_bd_cells ground] [get_bd_cells BTNs_4Bits] [get_bd_cells vdd] [get_bd_cells axi_i2s_adi_1] [get_bd_cells axi_vdma_1]
+endgroup
+startgroup
+delete_bd_objs [get_bd_nets axi_i2s_adi_1_LRCLK_O] [get_bd_nets processing_system7_0_FCLK_CLK2] [get_bd_ports VSYNC_O] [get_bd_ports AC_RECLRC] [get_bd_ports AC_MCLK] [get_bd_ports AC_BCLK] [get_bd_ports GREEN_O] [get_bd_ports RED_O] [get_bd_ports BLUE_O] [get_bd_ports AC_PBLRC] [get_bd_ports AC_MUTE_N] [get_bd_ports AC_SDATA_O] [get_bd_ports HSYNC_O]
+delete_bd_objs [get_bd_intf_ports LEDs_4Bits] [get_bd_intf_ports SWs_4Bits] [get_bd_intf_ports BTNs_4Bits]
+endgroup
+regenerate_bd_layout
+delete_bd_objs [get_bd_ports HDMI_D1_P] [get_bd_ports HDMI_D0_P] [get_bd_ports HDMI_CLK_N] [get_bd_ports HDMI_D2_P] [get_bd_ports HDMI_OEN] [get_bd_ports HDMI_D0_N] [get_bd_ports HDMI_D1_N] [get_bd_ports HDMI_CLK_P] [get_bd_ports HDMI_D2_N]
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:ip:processing_system7:5.5 [get_ips  system_processing_system7_0_0]
+report_ip_status -name ip_status 
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.PCW_USE_DMA0 {0} CONFIG.PCW_USE_DMA1 {0} CONFIG.PCW_EN_CLK1_PORT {0} CONFIG.PCW_EN_CLK2_PORT {0} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1}] [get_bd_cells processing_system7_0]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK1] [get_bd_nets processing_system7_0_FCLK_CLK1]
+endgroup
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_1
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins axi_timer_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins axi_timer_1/S_AXI]
+endgroup
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+connect_bd_net [get_bd_pins axi_timer_1/interrupt] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins axi_timer_0/interrupt] [get_bd_pins xlconcat_0/In0]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
+regenerate_bd_layout
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {0}] [get_bd_cells processing_system7_0]
+endgroup
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file mkdir C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {0} CONFIG.PCW_MIO_48_PULLUP {enabled} CONFIG.PCW_MIO_49_PULLUP {enabled}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file mkdir C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_MIO_48_PULLUP {disabled} CONFIG.PCW_MIO_49_PULLUP {disabled}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+file mkdir C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+file mkdir C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk
+file copy -force C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.runs/impl_1/system_wrapper.sysdef C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk -hwspec C:/Users/maval/Desktop/hw/zybo_bsd/zybo_bsd.sdk/system_wrapper.hdf
