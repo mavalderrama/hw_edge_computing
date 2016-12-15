@@ -118,12 +118,8 @@ void  MainT (void *p_arg)
 
 	xil_printf("Se inicio el proceso\n");
 	//HTTPcApp_Init ();
-	HTTPc_ERR           err;
-	err = HTTPcAPP_ReqSendPut();
-	if (err != HTTPc_ERR_NONE)
-		xil_printf("Error de la funcion\n");
-	else
-		xil_printf("HTTPc Enviado\n");
+	HTTPcAPP_ReqSendPut();
+	xil_printf("HTTPc Enviado\n");
 	//initialiseQueues ();
 	/*OS_ERR  err;
 	 OSTaskCreate (&MyTaskTCB0,
