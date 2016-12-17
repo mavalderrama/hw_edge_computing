@@ -6,7 +6,7 @@
 #define  STATIC_LOGO_GIF_NAME               "\\logo.gif"
 #define  STATIC_INDEX_HTML_NAME             "\\index.html"
 
-#define  STATIC_LOGO_GIF_LEN                0u
+#define  STATIC_LOGO_GIF_LEN                11u
 #define  STATIC_INDEX_HTML_LEN              3080u
 
 

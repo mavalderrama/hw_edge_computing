@@ -1,6 +1,64 @@
-12:41:58 **** Incremental Build of configuration Debug for project test ****
+16:10:22 **** Auto Build of configuration Debug for project test ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building file: ../src/http-c_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_app.o" -MMD -MP -MF"src/http-c_app.d" -MT"src/http-c_app.d" -o "src/http-c_app.o" "../src/http-c_app.c"
+../src/http-c_app.c: In function 'HTTPcApp_ReqSendPost':
+../src/http-c_app.c:489:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+     xil_printf("reqsend\n");                                                            /* ---------------- SEND HTTP REQUEST ----------------- */
+     ^
+../src/http-c_app.c:340:28: warning: unused variable 'p_data' [-Wunused-variable]
+     CPU_CHAR              *p_data;
+                            ^
+../src/http-c_app.c:337:28: warning: unused variable 'form_nbr' [-Wunused-variable]
+     CPU_INT08U             form_nbr;
+                            ^
+../src/http-c_app.c:336:28: warning: unused variable 'p_form_tbl' [-Wunused-variable]
+     HTTPc_FORM_TBL_FIELD  *p_form_tbl;
+                            ^
+../src/http-c_app.c: In function 'HTTPcAPP_ReqSendPut':
+../src/http-c_app.c:937:27: warning: pointer targets in passing argument 1 of 'Str_Len' differ in signedness [-Wpointer-sign]
+     content_len = Str_Len(&logo_gif[0]);//STATIC_LOGO_GIF_LEN;
+                           ^
+In file included from ../../test_bsp/ps7_cortexa9_0/include/Client/Source/http-c.h:110:0,
+                 from ../src/http-c_app.h:78,
+                 from ../src/http-c_app.c:59:
+../../test_bsp/ps7_cortexa9_0/include/lib_str.h:276:14: note: expected 'const CPU_CHAR *' but argument is of type 'const unsigned char *'
+ CPU_SIZE_T   Str_Len            (const  CPU_CHAR      *pstr);
+              ^
+'Finished building: ../src/http-c_app.c'
+' '
+'Building file: ../src/http-c_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/http-c_hooks.o" -MMD -MP -MF"src/http-c_hooks.d" -MT"src/http-c_hooks.d" -o "src/http-c_hooks.o" "../src/http-c_hooks.c"
+../src/http-c_hooks.c: In function 'HTTPcApp_ReqBodyHook':
+../src/http-c_hooks.c:229:36: warning: pointer targets in passing argument 1 of 'Str_Len' differ in signedness [-Wpointer-sign]
+             *p_data_len =  Str_Len(&logo_gif[0]);
+                                    ^
+In file included from ../../test_bsp/ps7_cortexa9_0/include/Client/Source/http-c.h:110:0,
+                 from ../src/http-c_hooks.h:68,
+                 from ../src/http-c_hooks.c:58:
+../../test_bsp/ps7_cortexa9_0/include/lib_str.h:276:14: note: expected 'const CPU_CHAR *' but argument is of type 'const unsigned char *'
+ CPU_SIZE_T   Str_Len            (const  CPU_CHAR      *pstr);
+              ^
+'Finished building: ../src/http-c_hooks.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 313356	   2340	 270432	 586128	  8f190	test.elf
+'Finished building: test.elf.size'
+' '
 
-12:41:58 Build Finished (took 138ms)
+16:10:23 Build Finished (took 1s.643ms)
 

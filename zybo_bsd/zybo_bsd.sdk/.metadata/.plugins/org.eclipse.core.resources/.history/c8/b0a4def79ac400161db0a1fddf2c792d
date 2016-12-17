@@ -2,7 +2,7 @@
 #include  "static_files.h"
 
 
-const unsigned char logo_gif[] = "{\"zyb\":111}";
+const unsigned char logo_gif[] = "{\"zyb\":12}";
 
 
 const unsigned char index_html[] =

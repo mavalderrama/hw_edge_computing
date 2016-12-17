@@ -4319,3 +4319,194 @@ Caused by: java.net.SocketException: Connection reset
 	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
 	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
 	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+12:39:49 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+12:39:50 INFO  : XSDB server has started successfully.
+12:39:50 INFO  : Restoring global repository preferences: 
+		 C:\ucos
+12:39:50 INFO  : Restoring local repository preferences: 
+		 C:\ucos\ucos_v1_41\ucos
+12:42:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:42:06 INFO  : Sourcing of 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:42:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+12:42:09 INFO  : System reset is completed.
+12:42:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1' command is executed.
+12:42:15 INFO  : FPGA configured successfully with bitstream "D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+12:42:16 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+12:42:16 INFO  : Hardware design information is loaded from 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf'.
+12:42:19 INFO  : 'ps7_init' command is executed.
+12:42:20 INFO  : 'ps7_post_config' command is executed.
+12:42:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:42:24 INFO  : The application 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:42:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1
+fpga -file D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+loadhw D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+dow D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+12:42:27 INFO  : Memory regions updated for context APU
+12:42:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:42:28 INFO  : 'con' command is executed.
+12:42:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+con
+----------------End of Script----------------
+
+13:24:15 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:51:39 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:51:53 INFO  : XSDB server has started successfully.
+15:51:58 INFO  : Restoring global repository preferences: 
+		 C:\ucos
+15:52:25 INFO  : Restoring local repository preferences: 
+		 C:\ucos\ucos_v1_41\ucos
+15:54:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:54:45 INFO  : Sourcing of 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:54:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+15:54:48 INFO  : System reset is completed.
+15:54:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1' command is executed.
+15:54:53 INFO  : FPGA configured successfully with bitstream "D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+15:54:53 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+15:54:53 INFO  : Hardware design information is loaded from 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf'.
+15:55:04 INFO  : 'ps7_init' command is executed.
+15:55:04 INFO  : 'ps7_post_config' command is executed.
+15:55:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:55:08 INFO  : The application 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:55:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1
+fpga -file D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+loadhw D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+dow D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+15:55:10 INFO  : Memory regions updated for context APU
+15:55:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:55:12 INFO  : 'con' command is executed.
+15:55:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+con
+----------------End of Script----------------
+
+15:58:30 INFO  : Disconnected from the channel tcfchan#1.
+15:58:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:58:31 INFO  : Sourcing of 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:58:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+15:58:34 INFO  : System reset is completed.
+15:58:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1' command is executed.
+15:58:40 INFO  : FPGA configured successfully with bitstream "D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+15:58:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+15:58:42 INFO  : Hardware design information is loaded from 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf'.
+15:58:50 INFO  : 'ps7_init' command is executed.
+15:58:50 INFO  : 'ps7_post_config' command is executed.
+15:58:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:56 INFO  : The application 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:58:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1
+fpga -file D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+loadhw D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+dow D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+15:58:56 INFO  : Memory regions updated for context APU
+15:58:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:57 INFO  : 'con' command is executed.
+15:58:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+con
+----------------End of Script----------------
+
+16:00:02 INFO  : Disconnected from the channel tcfchan#2.
+16:00:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:03 INFO  : Sourcing of 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:00:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+16:00:08 INFO  : System reset is completed.
+16:00:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1' command is executed.
+16:00:15 INFO  : FPGA configured successfully with bitstream "D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+16:00:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+16:00:15 INFO  : Hardware design information is loaded from 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf'.
+16:00:19 INFO  : 'ps7_init' command is executed.
+16:00:21 INFO  : 'ps7_post_config' command is executed.
+16:00:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:23 INFO  : The application 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:00:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1
+fpga -file D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+loadhw D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+dow D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+16:00:23 INFO  : Memory regions updated for context APU
+16:00:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:24 INFO  : 'con' command is executed.
+16:00:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+con
+----------------End of Script----------------
+
+16:01:27 INFO  : Disconnected from the channel tcfchan#3.
+16:01:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:01:27 INFO  : Sourcing of 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:01:28 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+16:01:31 INFO  : System reset is completed.
+16:01:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1' command is executed.
+16:01:37 INFO  : FPGA configured successfully with bitstream "D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+16:01:37 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0' command is executed.
+16:01:38 INFO  : Hardware design information is loaded from 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf'.
+16:01:51 INFO  : 'ps7_init' command is executed.
+16:01:51 INFO  : 'ps7_post_config' command is executed.
+16:01:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:53 INFO  : The application 'D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:01:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574625A" && level==0} -index 1
+fpga -file D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system_wrapper.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+loadhw D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/system_wrapper_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+dow D:/OneDrivePUJ/CEA/ZYBOTEST/ZYBOucosHTTP/zybo_bsd/zybo_bsd.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+16:01:54 INFO  : Memory regions updated for context APU
+16:01:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:55 INFO  : 'con' command is executed.
+16:01:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574625A"} -index 0
+con
+----------------End of Script----------------
+
