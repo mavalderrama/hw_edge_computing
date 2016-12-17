@@ -119,7 +119,7 @@ void  MainT (void *p_arg)
 	xil_printf("Se inicio el proceso\n");
 	//HTTPcApp_Init ();
 	HTTPc_ERR           err;
-	snprintf(Cloud,256u,"{\"zyb\":%d}",617);
+	snprintf(Cloud,256u,"{\"zyb\":666}");
 	err = HTTPcAPP_ReqSendPut();
 	if (err != HTTPc_ERR_NONE)
 		xil_printf("Error de la funcion\n");

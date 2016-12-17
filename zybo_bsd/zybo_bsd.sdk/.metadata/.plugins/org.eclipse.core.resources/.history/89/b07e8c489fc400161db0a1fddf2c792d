@@ -225,8 +225,8 @@ CPU_BOOLEAN  HTTPcApp_ReqBodyHook (HTTPc_CONN_OBJ     *p_conn,
              return (DEF_YES);
 
         case HTTP_METHOD_POST:
-            *p_data     = &Cloud[0];//(void *)&logo_gif[0];
-            *p_data_len =  Str_Len(&Cloud[0]);//Str_Len(&logo_gif[0]);
+            *p_data     = (void *)&logo_gif[0];
+            *p_data_len =  Str_Len(&logo_gif[0]);
              break;
 
 

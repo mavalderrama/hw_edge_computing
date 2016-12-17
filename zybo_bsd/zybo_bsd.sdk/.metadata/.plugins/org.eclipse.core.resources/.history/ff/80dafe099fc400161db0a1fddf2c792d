@@ -200,7 +200,7 @@ HTTPc_APP_EXT  CPU_CHAR              HTTPcApp_FormValStrTbl[2*HTTPc_APP_CFG_FORM
 HTTPc_APP_EXT  CPU_CHAR              HTTPcApp_FormMultipartNameStrTbl[HTTPc_APP_CFG_FORM_FIELD_NBR_MAX][HTTPc_APP_CFG_FORM_MULTIPART_NAME_LEN_MAX];
 HTTPc_APP_EXT  CPU_CHAR              HTTPcApp_FormMultipartFileNameStrTbl[HTTPc_APP_CFG_FORM_FIELD_NBR_MAX][HTTPc_APP_CFG_FORM_MULTIPART_FILENAME_LEN_MAX];
 
-HTTPc_APP_EXT  CPU_CHAR              Cloud[HTTPc_APP_CFG_FORM_BUF_SIZE];
+
 /*
 *********************************************************************************************************
 *********************************************************************************************************

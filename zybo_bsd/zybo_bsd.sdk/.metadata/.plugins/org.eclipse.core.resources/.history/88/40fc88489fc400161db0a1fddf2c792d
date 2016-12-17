@@ -934,8 +934,7 @@ CPU_BOOLEAN  HTTPcAPP_ReqSendPut (void)
         return (DEF_FAIL);
     }
 
-    //content_len = Str_Len(&logo_gif[0]);//STATIC_LOGO_GIF_LEN;
-    content_len = Str_Len(&Cloud[0]);
+    content_len = Str_Len(&logo_gif[0]);//STATIC_LOGO_GIF_LEN;
     HTTPc_ReqSetParam(p_req,
                       HTTPc_PARAM_TYPE_REQ_BODY_CONTENT_LEN,
                      &content_len,
