@@ -104,6 +104,8 @@ void pHardware ( void *arg );
 *********************************************************************************************************
 */
 
+CPU_CHAR post = 0;
+
 int main()
 {
 
@@ -114,19 +116,13 @@ int main()
 
 void  MainT (void *p_arg)
 {
+	HTTPc_ERR error;
 	xil_printf( "Hello World from MainT %d\n",0);
 
 	xil_printf("Se inicio el proceso\n");
 	//HTTPcApp_Init ();
-	HTTPc_ERR           err;
-	snprintf(Cloud,256u,"{\"zyb\":%d}",617);
-	err = HTTPcAPP_ReqSendPut();
-	if (err != HTTPc_ERR_NONE)
-		xil_printf("Error de la funcion\n");
-	else
-		xil_printf("HTTPc Enviado\n");
 	//initialiseQueues ();
-	/*OS_ERR  err;
+	OS_ERR  err;
 	 OSTaskCreate (&MyTaskTCB0,
 				  "My Task1",
 				  pCostumer,
@@ -149,7 +145,7 @@ void  MainT (void *p_arg)
 				   12,
 				  &MyTaskStk1[0],
 				   10,
-				  200,
+				   200,
 					5,
 				   10,
 				  (void *)0,
@@ -168,7 +164,21 @@ void  MainT (void *p_arg)
 				   10,
 				  (void *)0,
 				  OS_OPT_TASK_STK_CHK + OS_OPT_TASK_STK_CLR,
-				  &err);*/
+				  &err);
+	while(DEF_ON)
+	{
+		OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+		if(post == 1)
+		{
+			snprintf(Cloud,256u,"{\"zyb\":%d}",5);
+			error = HTTPcAPP_ReqSendPut();
+			if (error != HTTPc_ERR_NONE)
+				xil_printf("Error de la funcion\n");
+			else
+				xil_printf("HTTPc Enviado\n");
+			post = 0;
+		}
+	}
 }
 
 
@@ -238,6 +248,7 @@ void pController ( void *arg )
   OS_MSG_SIZE size;
   OS_ERR err;
   CPU_TS ts;
+  //HTTPc_ERR           error;
 
   unsigned int      NbrOfCoffee;
                     //NbrOfTea;
@@ -333,6 +344,7 @@ void pController ( void *arg )
             NbrOfCoffee++;
             xil_printf ( "\n%d Cup(s) of Coffee served!\n", NbrOfCoffee );
             //fflush ( stdout );
+            post = 1;
             state_next = IdleC;
             break;
           default:
