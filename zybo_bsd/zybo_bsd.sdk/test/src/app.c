@@ -75,10 +75,12 @@ OS_TCB  MyTaskTCB;
 OS_TCB  MyTaskTCB0;                        /*  (1) Storage for task’s TCB                  */
 OS_TCB  MyTaskTCB1;
 OS_TCB  MyTaskTCB2;
+OS_TCB  MyTaskTCB3;
 CPU_STK MyTaskStk[200];
 CPU_STK MyTaskStk0[200];
 CPU_STK MyTaskStk1[200];
 CPU_STK MyTaskStk2[200];
+CPU_STK MyTaskStk3[784];
 
 /*
 *********************************************************************************************************
@@ -86,9 +88,9 @@ CPU_STK MyTaskStk2[200];
 *********************************************************************************************************
 */
 
-void  MainTask (void *p_arg);
 void  MyTask (void *p_arg);
 void MainT (void *p_arg);
+void http(void *p_arg);
 void pCostumer ( void *arg );
 void pController ( void *arg );
 void pHardware ( void *arg );
@@ -116,7 +118,6 @@ int main()
 
 void  MainT (void *p_arg)
 {
-	HTTPc_ERR error;
 	xil_printf( "Hello World from MainT %d\n",0);
 
 	xil_printf("Se inicio el proceso\n");
@@ -165,23 +166,43 @@ void  MainT (void *p_arg)
 				  (void *)0,
 				  OS_OPT_TASK_STK_CHK + OS_OPT_TASK_STK_CLR,
 				  &err);
-	while(DEF_ON)
-	{
-		OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);
-		if(post == 1)
-		{
-			snprintf(Cloud,256u,"{\"zyb\":%d}",5);
-			error = HTTPcAPP_ReqSendPut();
-			if (error != HTTPc_ERR_NONE)
-				xil_printf("Error de la funcion\n");
-			else
-				xil_printf("HTTPc Enviado\n");
-			post = 0;
-		}
-	}
+
+	OSTaskCreate(&MyTaskTCB3,
+				  "http",
+				  http,
+				  (void *)0,
+				  12,
+				  &MyTaskStk3[0],
+				  0,
+				  UCOS_START_TASK_STACK_SIZE,
+				  0,
+				  0,
+				  DEF_NULL,
+				 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+				 &err);
 }
 
-
+void http(void *p_arg)
+{
+	HTTPc_ERR error;
+	OS_ERR err;
+	while(DEF_ON)
+		{
+			OSTaskSuspend((OS_TCB *)0,&err);
+			//OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+			xil_printf("sali del delay\n");
+			if(post == 1)
+			{
+				snprintf(Cloud,256u,"{\"zyb\":%d}",10);
+				error = HTTPcAPP_ReqSendPut();
+				if (error != HTTPc_ERR_NONE)
+					xil_printf("Error de la funcion\n");
+				else
+					xil_printf("HTTPc Enviado\n");
+				post = 0;
+			}
+		}
+}
 
 void pCostumer ( void *arg )
 {
@@ -345,6 +366,9 @@ void pController ( void *arg )
             xil_printf ( "\n%d Cup(s) of Coffee served!\n", NbrOfCoffee );
             //fflush ( stdout );
             post = 1;
+            //OSTimeDlyResume(MainT,&err);
+            OSTaskResume(&MyTaskTCB3,&err);
+            xil_printf("error resume %d!!!!!!!!!!!\n",err);
             state_next = IdleC;
             break;
           default:

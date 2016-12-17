@@ -1,4 +1,4 @@
-17:24:04 **** Build of project test_bsp ****
+18:43:00 **** Build of project test_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
@@ -70,12 +70,20 @@ make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
 make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling scuwdt"
+arm-xilinx-eabi-ar: unable to rename '../../../lib/libxil.a'; reason: Permission denied
+make[1]: *** [scuwdt_libs] Error 1
+make[1]: Target `libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs] Error 2
 "Running Make libs in ps7_cortexa9_0/libsrc/ucos_axitimer_v1_41/src"
 make -C ps7_cortexa9_0/libsrc/ucos_axitimer_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling ucos_axitimer"
 "Running Make libs in ps7_cortexa9_0/libsrc/ucos_common_v1_41/src"
 make -C ps7_cortexa9_0/libsrc/ucos_common_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling uC/OS Common Components"
+c:\xilinx\sdk\2015.4\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ar.exe: unable to rename '../../../lib/libucos.a'; reason: Permission denied
+make[1]: *** [ucos_common_libs] Error 1
+make[1]: Target `libs' not remade because of errors.
+make: *** [ps7_cortexa9_0/libsrc/ucos_common_v1_41/src/make.libs] Error 2
 "Running Make libs in ps7_cortexa9_0/libsrc/ucos_cpu_cortexa9_v1_41/src"
 make -C ps7_cortexa9_0/libsrc/ucos_cpu_cortexa9_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling ucos_cpu_cortexa9"
@@ -124,7 +132,7 @@ make -C ps7_cortexa9_0/libsrc/ucos_v1_41/src -s libs  "SHELL=CMD" "COMPILER=arm-
 "Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling xadcps"
-'Finished building libraries'
+make: Target `all' not remade because of errors.
 
-17:24:28 Build Finished (took 24s.236ms)
+18:43:27 Build Finished (took 26s.754ms)
 
