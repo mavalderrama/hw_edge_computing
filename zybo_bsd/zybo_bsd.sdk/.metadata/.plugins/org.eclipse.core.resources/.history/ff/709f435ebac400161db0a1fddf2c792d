@@ -171,7 +171,7 @@ void  MainT (void *p_arg)
 				  "http",
 				  http,
 				  (void *)0,
-				  5,
+				  12,
 				  &MyTaskStk3[0],
 				  0,
 				  UCOS_START_TASK_STACK_SIZE,
@@ -192,10 +192,10 @@ void http(void *p_arg)
 	CPU_TS ts;
 	while(DEF_ON)
 	{
-		//OSTaskResume(&MyTaskTCB2,&err);
+		OSTaskResume(&MyTaskTCB2,&err);
 		OSTaskSuspend((OS_TCB *)0,&err);
 		xil_printf("task resumed\n");
-		inmsg = OSTaskQPend(OS_CFG_TICK_RATE_HZ * 10,
+		inmsg = OSTaskQPend(OS_CFG_TICK_RATE_HZ * 20,
 							OS_OPT_PEND_BLOCKING,
 							&size,
 							&ts,
@@ -376,17 +376,17 @@ void pController ( void *arg )
           case sWarm:
             NbrOfCoffee++;
             xil_printf ( "\n%d Cup(s) of Coffee served!\n", NbrOfCoffee );
-            OSTaskResume(&MyTaskTCB3,&err);
             OSTaskQPost((OS_TCB *)&MyTaskTCB3,
 						(void *)&NbrOfCoffee,
 						(OS_MSG_SIZE)sizeof(NbrOfCoffee),
 						(OS_OPT )OS_OPT_POST_FIFO,
 						(OS_ERR *)&err);
+            OSTaskResume(&MyTaskTCB3,&err);
+            OSTaskSuspend((OS_TCB *)0,&err);
             /*OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);
             xil_printf("error resume %d!!!!!!!!!!!\n",err);
             OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);*/
             state_next = IdleC;
-            //OSTaskSuspend((OS_TCB *)0,&err);
             break;
           default:
             break;

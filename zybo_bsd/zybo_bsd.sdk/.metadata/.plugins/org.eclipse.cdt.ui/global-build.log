@@ -1,6 +1,399 @@
-18:44:50 **** Incremental Build of configuration Debug for project test ****
+19:01:29 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.
-18:44:53 **** Incremental Build of configuration Debug for project test ****
+19:01:39 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:02:40 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326884	   2340	 273968	 603192	  93438	test.elf
+'Finished building: test.elf.size'
+' '
+19:02:41 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:03:43 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326884	   2340	 273968	 603192	  93438	test.elf
+'Finished building: test.elf.size'
+' '
+19:03:47 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:05:41 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326884	   2340	 273968	 603192	  93438	test.elf
+'Finished building: test.elf.size'
+' '
+19:05:43 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:10:09 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326884	   2340	 273968	 603192	  93438	test.elf
+'Finished building: test.elf.size'
+' '
+19:10:12 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:10:42 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326972	   2340	 273968	 603280	  93490	test.elf
+'Finished building: test.elf.size'
+' '
+19:10:43 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:11:42 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326908	   2340	 273968	 603216	  93450	test.elf
+'Finished building: test.elf.size'
+' '
+19:13:47 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326908	   2340	 273968	 603216	  93450	test.elf
+'Finished building: test.elf.size'
+' '
+19:14:06 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326988	   2340	 273968	 603296	  934a0	test.elf
+'Finished building: test.elf.size'
+' '
+19:14:08 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:17:24 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 327052	   2340	 273968	 603360	  934e0	test.elf
+'Finished building: test.elf.size'
+' '
+19:17:26 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:19:30 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 327052	   2340	 273968	 603360	  934e0	test.elf
+'Finished building: test.elf.size'
+' '
+19:19:33 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:23:49 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326964	   2340	 273968	 603272	  93488	test.elf
+'Finished building: test.elf.size'
+' '
+19:23:58 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:25:46 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326964	   2340	 273968	 603272	  93488	test.elf
+'Finished building: test.elf.size'
+' '
+19:25:47 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:27:48 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326964	   2340	 273968	 603272	  93488	test.elf
+'Finished building: test.elf.size'
+' '
+19:27:58 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:29:49 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326972	   2340	 273968	 603280	  93490	test.elf
+'Finished building: test.elf.size'
+' '
+19:29:50 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:33:27 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326972	   2340	 273968	 603280	  93490	test.elf
+'Finished building: test.elf.size'
+' '
+19:33:28 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:34:02 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326972	   2340	 273968	 603280	  93490	test.elf
+'Finished building: test.elf.size'
+' '
+19:34:04 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:39:00 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326972	   2340	 273968	 603280	  93490	test.elf
+'Finished building: test.elf.size'
+' '
+19:39:02 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:39:40 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326972	   2340	 273968	 603280	  93490	test.elf
+'Finished building: test.elf.size'
+' '
+19:39:41 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:40:59 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../test_bsp/ps7_cortexa9_0/include -c -fmessage-length=0 -MT"src/app.o" -MMD -MP -MF"src/app.d" -MT"src/app.d" -o "src/app.o" "../src/app.c"
+'Finished building: ../src/app.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/app.o ./src/http-c_app.o ./src/http-c_hooks.o ./src/static_files.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lucos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326972	   2340	 273968	 603280	  93490	test.elf
+'Finished building: test.elf.size'
+' '
+19:41:01 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.

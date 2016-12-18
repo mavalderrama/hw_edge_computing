@@ -376,12 +376,12 @@ void pController ( void *arg )
           case sWarm:
             NbrOfCoffee++;
             xil_printf ( "\n%d Cup(s) of Coffee served!\n", NbrOfCoffee );
-            OSTaskResume(&MyTaskTCB3,&err);
             OSTaskQPost((OS_TCB *)&MyTaskTCB3,
 						(void *)&NbrOfCoffee,
 						(OS_MSG_SIZE)sizeof(NbrOfCoffee),
 						(OS_OPT )OS_OPT_POST_FIFO,
 						(OS_ERR *)&err);
+            OSTaskResume(&MyTaskTCB3,&err);
             /*OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);
             xil_printf("error resume %d!!!!!!!!!!!\n",err);
             OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err);*/
