@@ -1,4 +1,13 @@
-<h1 id="httpclient-con-digilent-zybo-y-ucos">HTTPclient con Digilent ZYBO y uC/OS</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello!</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="httpclient-con-digilent-zybo-y-ucos">HTTPclient con Digilent ZYBO y uC/OS</h1>
 
 <blockquote>
   <p><strong>Nota:</strong></p>
@@ -14,10 +23,10 @@
 
 <blockquote>
   <ul>
-  <li>Suite de Xilinx <script type="math/tex" id="MathJax-Element-185">\geq</script> 2015.4 (Vivado, Xilinx SDK).</li>
+  <li>Suite de Xilinx <script type="math/tex" id="MathJax-Element-187">\geq</script> 2015.4 (Vivado, Xilinx SDK).</li>
   <li>Repositorio de uC/OS <a href="https://goo.gl/C8aKfV">Descarga</a>.</li>
   <li>Cuenta de proveedor de servicios de nube. Ej: <a href="https://ubidots.com/">Ubidots.com</a> <br>
-  <ul><li>Repositorio de GIT </li></ul></li>
+  <ul><li>Repositorio de GIT.</li></ul></li>
   </ul>
 </blockquote>
 
@@ -418,4 +427,5 @@
 
 <p><a href="https://monetizejs.com/authorize?client_id=ESTHdCYOi18iLhhO&amp;summary=true"><img src="https://cdn.monetizejs.com/resources/button-32.png" alt="" title=""></a></p>
 
-<div class="footnotes"><hr><ol><li id="fn:footnote">Here is the <em>text</em> of the <strong>footnote</strong>. <a href="#fnref:footnote" title="Return to article" class="reversefootnote">↩</a></li></ol></div>
+<div class="footnotes"><hr><ol><li id="fn:footnote">Here is the <em>text</em> of the <strong>footnote</strong>. <a href="#fnref:footnote" title="Return to article" class="reversefootnote">↩</a></li></ol></div></div></body>
+</html>
