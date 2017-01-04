@@ -1,9 +1,7 @@
-*.tmp*
-*.log*
-
+*.tmp
+*.log
 *.LOG
-*
-*.xml*
+
 # Word temporary
 ~$*.doc*
 
